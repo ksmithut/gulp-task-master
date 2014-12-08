@@ -50,7 +50,7 @@ describe('task master tests', function () {
       );
     });
 
-    it('should run watch tasks', function (done) {
+    it('should run watch tasks', function () {
       this.timeout(0);
       var gulp = taskMaster('test/fixtures/tasks');
       var output = [];

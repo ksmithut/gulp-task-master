@@ -9,4 +9,4 @@ module.exports = function () {
   console.testLog('ran watcher');
 };
 
-module.exports.watch = path.resolve(__dirname, '..', 'watcher.txt');
+module.exports.watch = 'test/watcher.txt';

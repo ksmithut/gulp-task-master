@@ -20,7 +20,7 @@ module.exports = function (options) {
     dirname: 'tasks',
     cwd: process.cwd(),
     pattern: '*.js',
-    watchExt: '.watch'
+    watchExt: '.watch',
   });
 
   // This is the task pattern. Will look something like 'tasks/*.js'
