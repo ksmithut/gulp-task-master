@@ -1,8 +1,8 @@
 'use strict';
 
+var _        = require('lodash');
 var path     = require('path');
 var glob     = require('glob');
-var defaults = require('defaults');
 
 // There might be a better way of doing this. I remember reading an article that
 // peerDependencies should be deprecated and is considered bad practice, so I'm
@@ -11,12 +11,12 @@ var gulp     = module.parent.require('gulp');
 
 module.exports = function (options) {
   // If options is a string, assume that it is the dirname
-  if (typeof options === 'string' || options instanceof String) {
+  if (_.isString(options)) {
     options = { dirname: options };
   }
 
   // Establish the defaults
-  options = defaults(options, {
+  options = _.defaults(options, {
     dirname: 'tasks',
     cwd: process.cwd(),
     pattern: '*.js',
@@ -35,6 +35,12 @@ module.exports = function (options) {
 
     var taskName     = task.taskName || basename;
     var dependencies = task.dependencies || [];
+
+    // Transform the task object into a noop function if needed. This allows
+    // to export, for example, just a dependencies task.
+    if (!_.isFunction(task)) {
+      task = _.noop;
+    }
 
     gulp.task.call(gulp, taskName, dependencies, task);
 
