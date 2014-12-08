@@ -1,0 +1,37 @@
+{
+  "name": "gulp-task-master",
+  "version": "0.0.0",
+  "description": "Offers a way to modularize your tasks",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "coverage": "istanbul cover _mocha",
+    "codeclimate": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/.bin/codeclimate && rm -rf ./coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ksmithut/gulp-task-master.git"
+  },
+  "keywords": [
+    "gulp",
+    "tasks"
+  ],
+  "author": "ksmithut",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ksmithut/gulp-task-master/issues"
+  },
+  "homepage": "https://github.com/ksmithut/gulp-task-master",
+  "devDependencies": {
+    "codeclimate-test-reporter": "0.0.4",
+    "expect.js": "^0.3.1",
+    "gulp": "^3.8.10",
+    "istanbul": "^0.3.5",
+    "mocha": "^2.0.1",
+    "mocha-lcov-reporter": "0.0.1"
+  },
+  "dependencies": {
+    "defaults": "^1.0.0",
+    "glob": "^4.3.1"
+  }
+}

@@ -1,0 +1,9 @@
+coverage
+docs
+node_modules
+test
+.gitignore
+.jshintrc
+.travis.yml
+npm-debug.log
+.DS_Store
