@@ -91,6 +91,19 @@ The watch task gets the same task name of the task defined plus a '.watch'
 (configurable). So the above example would expose the 'js' task, plus a
 'js.watch' task.
 
+You may also specify a task that just has dependencies, such as an overall build
+task:
+
+```javascript
+// tasks/build.js
+'use strict';
+
+exports.dependencies = ['scripts', 'styles'];
+```
+
+Now you can run `gulp build`, and it will run both the `scripts` and the
+`styles` tasks.
+
 # Configuration
 
 In your main `gulpfile.js`, you pass the options in an object hash (pojo) in the
