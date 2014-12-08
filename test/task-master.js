@@ -2,6 +2,7 @@
 
 var expect     = require('expect.js');
 var fs         = require('fs');
+var path       = require('path');
 var taskMaster = require('../');
 var Gulp       = require('gulp').Gulp;
 
@@ -11,7 +12,7 @@ describe('task master tests', function () {
 
     it('should grab all of the included modules', function () {
       /* jshint maxstatements: false */
-      var gulp = taskMaster('test/fixtures');
+      var gulp = taskMaster('test/fixtures/tasks');
       expect(gulp.Gulp).to.be(Gulp);
       expect(gulp.tasks).to.have.keys(
         'task1',
@@ -35,7 +36,7 @@ describe('task master tests', function () {
     it('should take in options', function () {
       var gulp = taskMaster({
         dirname: 'fixtures',
-        pattern: '*.js',
+        pattern: 'tasks/*.js',
         cwd: __dirname,
         watchExt: '-watch'
       });
@@ -47,6 +48,17 @@ describe('task master tests', function () {
         'task4',
         'task4-watch'
       );
+    });
+
+    it('should run watch tasks', function (done) {
+      this.timeout(0);
+      var gulp = taskMaster('test/fixtures/tasks');
+      var output = [];
+      console.testLog = function (input) {
+        output.push(input);
+      };
+      gulp.start('task4-watch');
+      expect(output).to.be.eql(['ran watcher']);
     });
 
   });
