@@ -31,7 +31,7 @@
     "mocha-lcov-reporter": "0.0.1"
   },
   "dependencies": {
-    "lodash": "^2.4.1",
+    "defaults": "^1.0.0",
     "glob": "^4.3.1"
   }
 }
