@@ -8,5 +8,5 @@ node_js:
   - "0.10"
   - iojs
 env:
-	- secure: buEjAjwkQDf+e4ROIFRPu/om2U4JByns+TgNpHtx2L7n7P/aYCDao2qXQyi2vlekPM5sWG3FLmmSeDY6EogC6H3M+Dg8p8xH/NfPC4yiekjEgQfqUzxc4MrpuX2vF7ftqEe4nNPQZrUHhVFTVEzue7hrX/CyU/pbRkB0KM1OczM=
+  - secure: buEjAjwkQDf+e4ROIFRPu/om2U4JByns+TgNpHtx2L7n7P/aYCDao2qXQyi2vlekPM5sWG3FLmmSeDY6EogC6H3M+Dg8p8xH/NfPC4yiekjEgQfqUzxc4MrpuX2vF7ftqEe4nNPQZrUHhVFTVEzue7hrX/CyU/pbRkB0KM1OczM=
 after_success: npm run codeclimate
