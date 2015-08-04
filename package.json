@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "description": "Offers a way to modularize your tasks",
   "main": "index.js",
+  "files": [
+    "index.js"
+  ],
   "scripts": {
-    "jshint": "jshint --reporter node_modules/jshint-stylish/stylish.js index.js",
+    "jshint": "jshint --reporter node_modules/jshint-stylish index.js",
     "check-cov": "istanbul check-coverage --statements 100 --functions 100 --branches 100 --lines 100",
     "test": "istanbul cover _mocha",
     "posttest": " npm run check-cov; npm run jshint;",
-    "codeclimate": "cat ./coverage/lcov.info | codeclimate"
+    "codeclimate": "cat ./coverage/lcov.info | codeclimate-test-reporter"
   },
   "repository": {
     "type": "git",
@@ -25,17 +28,17 @@
   },
   "homepage": "https://github.com/ksmithut/gulp-task-master",
   "devDependencies": {
-    "codeclimate-test-reporter": "0.0.4",
-    "expect.js": "^0.3.1",
-    "gulp": "^3.8.10",
-    "istanbul": "^0.3.5",
-    "jshint": "^2.6.0",
-    "jshint-stylish": "^1.0.0",
-    "mocha": "^2.1.0",
-    "mocha-lcov-reporter": "0.0.1"
+    "chai": "^3.2.0",
+    "codeclimate-test-reporter": "^0.1.0",
+    "gulp": "^3.9.0",
+    "istanbul": "^0.3.17",
+    "jshint": "^2.8.0",
+    "jshint-stylish": "^2.0.1",
+    "mocha": "^2.2.5",
+    "mocha-lcov-reporter": "0.0.2"
   },
   "dependencies": {
-    "defaults": "^1.0.0",
-    "glob": "^4.3.5"
+    "glob": "^5.0.14",
+    "object-assign": "^3.0.0"
   }
 }

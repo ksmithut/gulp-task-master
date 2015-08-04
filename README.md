@@ -116,10 +116,11 @@ function call to `gulp-task-master`. Default options shown below:
 'use strict';
 
 var gulp = require('gulp-task-master')({
-  dirname: 'tasks',   // The directory that tasks are located in
-  pattern: '*.js',    // Pattern to use when looking for task files
-  cwd: process.cwd(), // Current working directory configuration
-  watchExt: '.watch'  // Extension to append to the end of watch tasks
+  dirname: 'tasks',     // The directory that tasks are located in
+  pattern: '*.js',      // Pattern to use when looking for task files
+  cwd: process.cwd(),   // Current working directory configuration
+  watchExt: '.watch'    // Extension to append to the end of watch tasks
+  gulp: require('gulp') // The gulp instance to use
 });
 
 // You can still define your own tasks or group tasks here

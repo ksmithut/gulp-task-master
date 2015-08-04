@@ -1,13 +1,8 @@
 'use strict';
 
-var path     = require('path');
-var glob     = require('glob');
-var defaults = require('defaults');
-
-// There might be a better way of doing this. I remember reading an article that
-// peerDependencies should be deprecated and is considered bad practice, so I'm
-// hoping that this solution is a bit better.
-var gulp     = module.parent.require('gulp');
+var path   = require('path');
+var glob   = require('glob');
+var assign = require('object-assign');
 
 module.exports = function (options) {
   // If options is a string, assume that it is the dirname
@@ -16,12 +11,15 @@ module.exports = function (options) {
   }
 
   // Establish the defaults
-  options = defaults(options, {
+  options = assign({
     dirname: 'tasks',
     cwd: process.cwd(),
     pattern: '*.js',
     watchExt: '.watch',
-  });
+    gulp: module.parent.require('gulp')
+  }, options);
+
+  var gulp = options.gulp;
 
   // This is the task pattern. Will look something like 'tasks/*.js'
   var tasksPattern = path.join(options.dirname, options.pattern);
@@ -29,7 +27,7 @@ module.exports = function (options) {
   // current working directory
   var taskFiles    = glob.sync(tasksPattern, {cwd: options.cwd});
 
-  taskFiles.map(function (taskFile) {
+  taskFiles.forEach(function (taskFile) {
     var basename     = path.basename(taskFile, path.extname(taskFile));
     var task         = require(path.join(options.cwd, taskFile));
 
