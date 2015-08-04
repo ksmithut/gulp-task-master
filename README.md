@@ -3,8 +3,8 @@
 [![io.js compatibility](https://img.shields.io/badge/io.js-compatible-brightgreen.svg?style=flat)](https://iojs.org/)
 [![NPM version](http://img.shields.io/npm/v/gulp-task-master.svg?style=flat)](https://www.npmjs.org/package/gulp-task-master)
 
-[![Dependency Status](http://img.shields.io/david/ksmithut/gulp-task-master.svg?style=flat)](https://gemnasium.com/ksmithut/gulp-task-master)
-[![Dependency Status](http://img.shields.io/david/dev/ksmithut/gulp-task-master.svg?style=flat)](https://gemnasium.com/ksmithut/gulp-task-master)
+[![Dependency Status](http://img.shields.io/david/ksmithut/gulp-task-master.svg?style=flat)](https://david-dm.org/ksmithut/gulp-task-master)
+[![Dev Dependency Status](http://img.shields.io/david/dev/ksmithut/gulp-task-master.svg?style=flat)](https://david-dm.org/ksmithut/gulp-task-master)
 [![Code Climate](http://img.shields.io/codeclimate/github/ksmithut/gulp-task-master.svg?style=flat)](https://codeclimate.com/github/ksmithut/gulp-task-master)
 [![Build Status](http://img.shields.io/travis/ksmithut/gulp-task-master.svg?style=flat)](https://travis-ci.org/ksmithut/gulp-task-master)
 [![Coverage Status](http://img.shields.io/codeclimate/coverage/github/ksmithut/gulp-task-master.svg?style=flat)](https://codeclimate.com/github/ksmithut/gulp-task-master)
