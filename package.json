@@ -28,17 +28,17 @@
   },
   "homepage": "https://github.com/ksmithut/gulp-task-master",
   "devDependencies": {
-    "chai": "^3.2.0",
-    "codeclimate-test-reporter": "^0.1.0",
-    "gulp": "^3.9.0",
-    "istanbul": "^0.3.17",
-    "jshint": "^2.8.0",
-    "jshint-stylish": "^2.0.1",
-    "mocha": "^2.2.5",
-    "mocha-lcov-reporter": "0.0.2"
+    "chai": "^3.5.0",
+    "codeclimate-test-reporter": "^0.3.1",
+    "gulp": "^3.9.1",
+    "istanbul": "^0.4.3",
+    "jshint": "^2.9.1",
+    "jshint-stylish": "^2.1.0",
+    "mocha": "^2.4.5",
+    "mocha-lcov-reporter": "^1.2.0"
   },
   "dependencies": {
-    "glob": "^5.0.14",
-    "object-assign": "^3.0.0"
+    "glob": "^7.0.3",
+    "object-assign": "^4.0.1"
   }
 }

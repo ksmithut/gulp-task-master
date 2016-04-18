@@ -1,8 +1,5 @@
 # gulp-task-master
 
-[![io.js compatibility](https://img.shields.io/badge/io.js-compatible-brightgreen.svg?style=flat)](https://iojs.org/)
-[![NPM version](http://img.shields.io/npm/v/gulp-task-master.svg?style=flat)](https://www.npmjs.org/package/gulp-task-master)
-
 [![Dependency Status](http://img.shields.io/david/ksmithut/gulp-task-master.svg?style=flat)](https://david-dm.org/ksmithut/gulp-task-master)
 [![Dev Dependency Status](http://img.shields.io/david/dev/ksmithut/gulp-task-master.svg?style=flat)](https://david-dm.org/ksmithut/gulp-task-master)
 [![Code Climate](http://img.shields.io/codeclimate/github/ksmithut/gulp-task-master.svg?style=flat)](https://codeclimate.com/github/ksmithut/gulp-task-master)
